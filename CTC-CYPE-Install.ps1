@@ -1,7 +1,9 @@
 # To execute this script in Restricted mode, open Powershell as admin and execute the following command before running the script
 # PowerShell -ExecutionPolicy Bypass
 
-Write-Output "CTC-CYPE mandatory softwares install"
+Write-Output "****************************************"
+Write-Output "* CTC-CYPE mandatory softwares install *"
+Write-Output "****************************************"
 
 # Chocolatey install
 Write-Output "1.Chocolatey install"
@@ -70,3 +72,6 @@ catch [System.Management.Automation.CommandNotFoundException]
     Write-Output "GNU Make not installed on system - installation in progress"
     choco install make -y
 }
+Write-Output "***************************************************"
+Write-Output "* Install finished - please restart your computer *"
+Write-Output "***************************************************"
