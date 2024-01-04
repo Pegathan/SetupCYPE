@@ -72,6 +72,18 @@ catch [System.Management.Automation.CommandNotFoundException]
     Write-Output "GNU Make not installed on system - installation in progress"
     choco install make -y
 }
+
+# .wslconfig file 
+Write-Output "7.wslconfig file param"
+
+$wslConfig = "[wsl2]"+"`nkernelCommandLine = `"sysctl.vm.max_map_count=262144`""
+if (!(Test-Path $env:USERPROFILE\.wslconfig)) {
+    New-Item -Path $env:USERPROFILE -Name .wslconfig | Out-Null
+    Add-Content -Path $env:USERPROFILE\.wslconfig -Value $wslConfig
+} elseif ((Select-String -Path $env:USERPROFILE\.wslconfig -Pattern "sysctl.vm.max_map_count") -eq $null) {
+    Add-Content -Path $env:USERPROFILE\.wslconfig -Value $wslConfig
+}
+
 Write-Output "***************************************************"
 Write-Output "* Install finished - please restart your computer *"
 Write-Output "***************************************************"
