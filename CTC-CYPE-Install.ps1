@@ -55,10 +55,6 @@ catch [System.Management.Automation.CommandNotFoundException]
 Write-Output "5.Visual Studio Code extensions install"
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension GitHub.vscode-pull-request-github
-code --install-extension ms-vscode-remote.remote-wsl
-code --install-extension humao.rest-client
-code --install-extension ms-vscode.powershell
-code --install-extension styled-components.vscode-styled-components
 
 # GNU Make install
 Write-Output "6.GNU Make install"
