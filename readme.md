@@ -29,10 +29,10 @@ To ease install and maintenance of all previous elements, PowerShell and Chocola
 
 # Post-install configuration
 
-1. Open VS Code and click on profile icon at bottom-left. Select "Sign in with GitHub to use GitHub Pull requests and Issues" and enter your GitHub credentials
+1. Open VS Code and click on profile icon at bottom-left. Select "Sign in with GitHub to use GitHub Pull requests and Issues" and enter your GitHub credentials  
 ![GitHub connection](./misc/GitHub-connection.png)  
 2. To import a GitHub project locally, in VS Code, open Command Palette by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>, then type ``git clone`` and press <kbd>Enter &#8629;</kbd>  
-Enter URL of the project, press <kbd>Enter &#8629;</kbd> and choose destination folder
+Enter URL of the project, press <kbd>Enter &#8629;</kbd> and choose destination folder  
 ![Git clone](./misc/git-clone.png)
 3. When import is finished, choose to open the project
 4. In VS Code, to open a PowerShell session in the project folder, press <kbd>Ctrl</kbd> + <kbd>ù</kbd>
