@@ -7,11 +7,15 @@ Write-Output "****************************************"
 
 # Chocolatey install
 Write-Output "1.Chocolatey install"
-if (!(Test-Path -Path "$env:ProgramData\Chocolatey")) {
+try
+{
+    choco -v | Out-Null
+    Write-Output "Chocolatey already installed"
+}
+catch [System.Management.Automation.CommandNotFoundException]
+{
     Write-Output "Chocolatey not installed on system - installation in progress"
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-} else {
-        Write-Output "Chocolatey already installed"
 }
 Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 
