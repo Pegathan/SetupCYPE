@@ -3,7 +3,7 @@
 In order to deploy and work on a complete docker environment on a Windows localhost, many softwares are required:
 - Docker Desktop, for running and managing containers
 - Git, for managing versions
-- Visual Studio Code and extensions, a powerfull IDE to manage project and launch code
+- Visual Studio Code and extensions, a powerful IDE to manage project and launch code
 - Make, to ease deployment and execution of project
 
 Moreover, some configuration files are mandatory in user path.
