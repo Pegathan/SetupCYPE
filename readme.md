@@ -3,6 +3,7 @@
 In order to deploy and work on a complete docker environment on a Windows localhost, many softwares are required:
 - Docker Desktop, for running and managing containers
 - Git, for managing versions
+- GitHub CLI, for shell commands with GitHub
 - Visual Studio Code and extensions, a powerful IDE to manage project and launch code
 - Make, to ease deployment and execution of project
 
@@ -36,3 +37,12 @@ Enter URL of the project, press <kbd>Enter &#8629;</kbd> and choose destination 
 ![Git clone](./misc/git-clone.png)
 3. When import is finished, choose to open the project
 4. In VS Code, to open a PowerShell session in the project folder, press <kbd>Ctrl</kbd> + <kbd>ù</kbd>
+
+# Upgrade all packages
+
+As of now Docker-Desktop upgrade causes problems. To upgrade all packages except Docker-Desktop, execute this command :  
+1. Open PowerShell as Administrator
+2. Execute this command
+```
+choco upgrade all -y --except="docker-desktop"
+```

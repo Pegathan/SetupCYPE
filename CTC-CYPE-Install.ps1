@@ -84,6 +84,19 @@ if (!(Test-Path $env:USERPROFILE\.wslconfig)) {
     Add-Content -Path $env:USERPROFILE\.wslconfig -Value $wslConfig
 }
 
+# GitHub CLI install
+Write-Output "8.GitHub CLI"
+try
+{
+    gh version | Out-Null
+    Write-Output "GitHub CLI already installed"
+}
+catch [System.Management.Automation.CommandNotFoundException]
+{
+    Write-Output "GitHub CLI not installed on system - installation in progress"
+    choco install gh -y
+}
+
 Write-Output "***************************************************"
 Write-Output "* Install finished - please restart your computer *"
 Write-Output "***************************************************"
